@@ -1,2 +1,40 @@
 Ngoc Kim 123456
 Change by A
+# include <stdio.h>
+
+void NhapMang(int a[],int&n)
+{
+   printf ("Nhap so phan tu cua mang: n=");
+   scanf("%d",&n);
+   printf (" Nhap gia tri cho tung phan tu cua mang: \n");
+   for(int i=0;i<n;i++)
+   {   	
+   	printf ("a[%d]=",i);
+   	scanf("%d",&a[i]);
+   }
+}
+ 
+ void HienThiMang(int a[],int n)
+ {
+   printf(" \n Mang vua nhap la:\n");
+   for(int i=0;i<n;i++)
+   printf("%d  ",a[i]);
+   printf("\n Hien thi phan tu thu 2 la %d",a[1]);
+ }
+
+
+
+int main()
+{
+   printf(" Mang trong ngon ngu C \n");
+   int 	a[100];
+   int n=0;
+   NhapMang(a,n);
+
+   
+   // hien thi cac phan tu trong mang vua nhap
+   HienThiMang(a,n);
+
+   return 0;
+}
+// ta nhap n so phan tu , nhap cho tung phan tu=> kq hien thi
